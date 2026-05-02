@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+
+namespace TestWebApplication1.Models;
+
+public partial class CompanyProcessingMessage
+{
+    public int CompanyProcessingMessageId { get; set; }
+
+    public int CompanyId { get; set; }
+
+    public string ProcessingMessageType { get; set; } = null!;
+
+    public string ProcessingMessageText { get; set; } = null!;
+
+    public DateTime? CreatedOn { get; set; }
+
+    public string? CreatedBy { get; set; }
+
+    public int? CreatedByCompanyId { get; set; }
+
+    public DateTime? UpdatedOn { get; set; }
+
+    public string? UpdatedBy { get; set; }
+
+    public int? UpdatedByCompanyId { get; set; }
+
+    public DateTime? DeletedOn { get; set; }
+
+    public string? DeletedBy { get; set; }
+
+    public int? DeletedByCompanyId { get; set; }
+
+    public virtual Company Company { get; set; } = null!;
+}
